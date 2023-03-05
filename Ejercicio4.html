@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function valida() {
+            var nom= document.getElementById('nombre').value;
+            var ape= document.getElementById('apellido').value;
+            var core= document.getElementById('correo').value;
+            var tel= document.getElementById('tele').value;
+            if (!nom || !ape || !core || !tel) {
+                alert("Esta vacio loco!")
+            }else{
+                alert("perfecto")
+            }
+        }
+    </script>
+    <title>ejercicio4</title>
+</head>
+<body>
+    <label>Nombre: <input type="text" name="nombre" id="nombre"> Apellido: <input type="text" name="apellido" id="apellido"> Correo: <input type="email" name="correo" id="correo"> Telefono: <input type="tel" name="tele" id="tele"> <button onclick="valida()">validar</button></label>
+</body>
+</html>

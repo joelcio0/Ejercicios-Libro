@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>ejercicio1</title>
+        <script>
+            var tan = 16;
+            var ori = 16;
+            window.onload();
+            function aumentar() {
+                let tama = document.getElementById("aumentar").value;
+                if (tan < 30) {
+                    tan = tan + 4;
+                } else {
+                    document.getElementById(tama).style.color = "red";
+                    alert("Alberto me obliga avisar que no quiero que te crezca mas el pit*, perdon el parrafo")
+                }
+                var aum = (document.getElementById(tama).style.fontSize = tan + "px");
+            }
+            function decrementar() {
+                let tama = document.getElementById("aumentar").value;
+                if (tan > 4) {
+                    tan = tan - 4;
+                } else {
+                    document.getElementById(tama).style.color = "red";
+                    alert("Alberto me obliga avisar que no quiere que te encoja mas la camiseta, perdon el parrafo")
+                }
+                var aum = (document.getElementById(tama).style.fontSize = tan + "px");
+            }
+            function original() {
+                let tama = document.getElementById("aumentar").value;
+                var aum = (document.getElementById(tama).style.fontSize = ori + "px");
+                document.getElementById(tama).style.color = "black";
+            }
+        </script>
+    </head>
+    <body>
+        <p id="1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem adipisci
+                  obcaecati nulla repellendus, ipsa tempora natus eum veritatis et
+                  consequatur magnam. Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Quidem adipisci obcaecati nulla repellendus, ipsa tempora natus eum
+                  veritatis et consequatur magnam.
+        </p>
+
+        <p id="2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem adipisci
+                  obcaecati nulla repellendus, ipsa tempora natus eum veritatis et
+                  consequatur magnam. Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Quidem adipisci obcaecati nulla repellendus, ipsa tempora natus eum
+                  veritatis et consequatur magnam.
+        </p>
+
+        <p id="3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem adipisci
+                  obcaecati nulla repellendus, ipsa tempora natus eum veritatis et
+                  consequatur magnam. Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Quidem adipisci obcaecati nulla repellendus, ipsa tempora natus eum
+                  veritatis et consequatur magnam.
+        </p>
+        <label><input type="number" name="aumentar" id="aumentar" placeholder="Dime el parrafo" size="3" max="3" min="1"/><input type="button" value="aumenta" onclick="aumentar()"/></label>
+        <label><input type="number" name="decrementar" id="decrementar" placeholder="Dime el parrafo" size="3" max="3" min="1"/><input type="button" value="decrementar" onclick="decrementar()"/></label>
+        <label><input type="number" name="original" id="original" placeholder="Dime el parrafo" size="3" max="3" min="1"/><input type="button" value="original" onclick="original()"/></label>
+    </body>
+</html>

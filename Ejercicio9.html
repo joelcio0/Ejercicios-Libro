@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="crear()">Crear ventana</button>
+    <button onclick="aumentar()">Aumentar Tamaño</button>
+    <button onclick="encoger()">Disminuir Tamaño</button>
+    <script>
+        var ventana;
+        var width=400;
+        var height=300;
+        function crear() {
+            ventana=window.open("", "MsgWindow", "width=400,height=300");
+        }
+        
+        function aumentar(){
+            width=Math.floor(width*1.15);
+            height=Math.floor(height*1.15)
+            ventana.resizeTo(width,height);
+            ventana.focus();
+        } 
+        
+        function encoger(){
+            width=Math.floor(width*0.75);
+            height=Math.floor(height*0.75);
+            ventana.resizeTo(width,height);
+            ventana.focus();
+        }
+
+
+    </script>
+</body>
+</html>

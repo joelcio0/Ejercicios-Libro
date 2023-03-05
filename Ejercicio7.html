@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            var con = 0;
+            var pro = confirm("Te sientes alejado de tus compañeros");
+            var pri = confirm("¿Se rien de ti?");
+            var pra = confirm("¿Te pegan?");
+            var pre = confirm("¿Todas las bromas van dirijidas hacia ti?");
+            var pru = confirm("¿Tienes los 15 puntos del carnet?");
+            if (pro) {
+                con++;
+            }
+            if (pra) {
+                con++;
+            }
+            if (pru) {
+                con++;
+            }
+            if (pre) {
+                con++;
+            }
+            if (pri) {
+                con++;
+            }
+            if (con>=3) {
+                alert("Sufres de acoso")
+            }
+        </script>
+    </body>
+
+</html>

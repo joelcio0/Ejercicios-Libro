@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="b1">Funciones</button>
+    <button id="b2">Borrar</button>
+    <script>
+      var boton1 = document.getElementById("b1");
+      var boton2 = document.getElementById("b2");
+      window.onload = cargando;
+      let n = 3;
+      function cargando() {
+        boton1 = document.getElementById("b1");
+        boton2 = document.getElementById("b2");
+        boton1.addEventListener("click", pinchar);
+        boton1.addEventListener("mouseover", dentro);
+        boton1.addEventListener("mouseout", fuera);
+        boton2.addEventListener("click", borra);
+        function dentro() {
+          let p = document.createElement("p");
+          p.textContent = "estas sobre mi 😚";
+          document.body.appendChild(p);
+        }
+        function pinchar() {
+          let p = document.createElement("p");
+          p.textContent = "Me estas pinchanco el ojo 👁";
+          document.body.appendChild(p);
+        }
+        function fuera() {
+          let p = document.createElement("p");
+          p.textContent = "Estas fuera del boton";
+          document.body.appendChild(p);
+        }
+        function borra() {
+          switch (n) {
+            case 3:
+              boton1.removeEventListener("click", pinchar);
+              n--;
+              break;
+            case 2:
+              boton1.removeEventListener("mouseover", dentro);
+             
+              n--;
+              break;
+            case 1:
+              boton1.removeEventListener("mouseout", fuera);
+              n--;
+              break;
+            default:
+              boton2.setAttribute("disabled", "true");
+              break;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
